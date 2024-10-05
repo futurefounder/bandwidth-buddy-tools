@@ -6,9 +6,9 @@ If used correctly, you can quickly dissect your website and optimize it for band
 
 ## Features
 
-- **Page Size Checker**: Analyze the total size of assets (images, scripts, stylesheets, etc.) on web pages.
-- **URL File Size Checker**: Check file sizes from a list of URLs to identify large resources.
-- **Sitemap Size Checker**: Process sitemaps to extract URLs and check the sizes of the resources linked on those pages.
+- **Page Size Checker Sitemap**: Analyze the total size of assets (images, scripts, stylesheets, etc.) from a sitemap.
+- **Page Size Checker URL**: Check file sizes from a list of URLs to identify large resources.
+- **Sitemap Scanner**: Find any string in a given sitemap.
 - **Customizable Thresholds**: Set size thresholds for reporting large files.
 
 ## Project Structure
