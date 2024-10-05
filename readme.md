@@ -1,6 +1,8 @@
-# Bandwidth Buddy Tools
+# Bandwidth Buddy - Tools
 
-**Bandwidth Buddy Tools** is a set of Python scripts designed to help developers analyze and optimize web page performance by reducing bandwidth usage. These tools allow users to check the sizes of various assets on web pages, extract file sizes from sitemaps, and detect oversized resources that may affect website load time.
+**Bandwidth Buddy - Tools** is a set of Python scripts designed to help developers analyze and optimize web page assets and thereby reducing bandwidth usage. These tools allow users to check the sizes of various assets on web pages, extract file sizes from sitemaps, and detect oversized resources that may affect website bandwidth usage.
+
+If used correctly, you can quickly dissect your website and optimize it for bandwidth efficiency and page speed.
 
 ## Features
 
@@ -14,9 +16,9 @@
 ```bash
 bandwidth-buddy-tools/
 ├── src/
-│   ├── sitemap_checker.py         # Script for checking file sizes from sitemaps
-│   ├── url_checker.py             # Script for checking file sizes from a list of URLs
-│   ├── page_size_checker.py       # Script for checking the page size of a webpage
+│   ├── pagesize_checker_sitemap.py       # Script for checking page sizes from a sitemap
+│   ├── pagesize_checker_URLs.py          # Script for checking file sizes from a list of URLs
+│   ├── sitemap_scanner.py                # Script for searching for an asset, or a string from a sitemap
 ├── outputs/                       # Directory where output CSV files will be saved
 ```
 
@@ -44,11 +46,12 @@ pip install -r requirements.txt
 
 # Usage
 
-### 1. Page Size Checker (from a list of URLs)
+### 🤏 1. Page Size Checker URLs
 
 This tool analyzes the size of assets on a list of web pages. You can specify a list of URLs and a size threshold to report oversized assets.
 
 Example usage:
+Start the script with the command
 
 ```bash
 python src/page_size_checker.py
@@ -56,64 +59,45 @@ python src/page_size_checker.py
 
 You will be prompted to:
 
-Enter a comma-separated list of URLs.
-Choose between displaying results in the console or saving them to a file. 2. URL File Size Checker (from a list of URLs)
-Checks the file size of resources (such as images, videos, or scripts) linked to a list of URLs.
+- Enter a comma-separated list of URLs.
+- Specify a size threshold for reporting large assets.
+- Choose between displaying results in the console or saving them to a file.
 
-Example usage:
+### 🗺️ 2. Page Size Checker Sitemap
 
-bash
-Copy code
-python src/url_checker.py
+This tool extracts URLs from a sitemap and checks the size of the resources on those pages.
+
 You will be prompted to:
 
-Enter a comma-separated list of URLs.
-Specify a size threshold for reporting large assets. 3. Sitemap Size Checker
-Extracts URLs from a sitemap and checks the size of the resources on those pages.
+- Enter the URL of a sitemap.
+- Choose between displaying results in the console or saving them to a file.
 
-Example usage:
+### 🔍 3. Sitemap Scanner
 
-bash
-Copy code
-python src/sitemap_checker.py
+This tool scans an XML sitemap and checks the contents of each listed URL for specific search strings which you can use to find a specific asset, or other content on a site. The script allows you to output the results either in the console or save them to a CSV file for later analysis.
+
 You will be prompted to:
 
-Enter the URL of a sitemap.
-Choose between displaying results in the console or saving them to a file.
-Example
-Here’s an example of checking page sizes for a list of URLs:
+- Enter the URL of a sitemap.
+- Input search strings
 
-Run the script:
+# Contributing
 
-bash
-Copy code
-python src/page_size_checker.py
-Input URLs:
-
-text
-Copy code
-Enter a comma-separated list of URLs (e.g., https://example.com/page1, https://example.com/page2):
-Select Output:
-
-text
-Copy code
-Do you want the results in the console or as a file? (press 'c' for console, 'f' for file, 'x' to exit):
-View Results:
-
-If you choose the file option, results will be saved in the outputs/ directory.
-
-Contributing
 Contributions are welcome! If you'd like to contribute to Bandwidth Buddy Tools, please follow these steps:
 
-Fork the repository.
-Create a new branch (git checkout -b feature-branch).
-Make your changes and commit them (git commit -m 'Add some feature').
-Push to the branch (git push origin feature-branch).
-Open a Pull Request.
-License
-This project is licensed under the MIT License. See the LICENSE file for more details.
+- Fork the repository.
+- Create a new branch (git checkout -b feature-branch).
+- Make your changes and commit them (git commit -m 'Add some feature').
+- Push to the branch (git push origin feature-branch).
+- Open a Pull Request.
 
-Author
+# License
+
+This project is licensed under the MIT License.
+See the LICENSE file for more details.
+
+# Author
+
 Jesse Khala
 
-For more information about the author, visit jessekhala.com.
+For more information about the author, visit [jessekhala.com](htrtps://jessekhala.com).
